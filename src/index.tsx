@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import AppRoutes from './AppRoutes';
 
 
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
