@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Live Financial Data Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A web application that provides live cryptocurrency and stock market data using third-party APIs.
 
-## Available Scripts
+## 📌 Features
+- Fetch live **cryptocurrency** data from CryptoRank API.
+- Retrieve **stock market** data using Yahoo Finance API.
+- Interactive UI with data selection and display.
+- Built with **React (TypeScript)** and **React Router**.
+- Custom styling using CSS.
+- Performance monitoring with `web-vitals`.
+- Testing setup with `Jest` and `React Testing Library`.
 
-In the project directory, you can run:
+## 📂 Project Structure
+```
+/src
+👆🏻 api.tsx                   # API configurations
+👆🏻 App.tsx                   # Main application component
+👆🏻 AppRoutes.tsx             # Routing setup
+👆🏻 coinData.tsx              # Cryptocurrency API calls
+👆🏻 cryptocurrencyPage.tsx    # Cryptocurrency page component
+👆🏻 homePage.tsx              # Home page component
+👆🏻 stockMarketPage.tsx       # Stock market page component
+👆🏻 index.tsx                 # Application entry point
+👆🏻 types.tsx                 # TypeScript types
+👆🏻 utils.tsx                 # Utility functions
+👆🏻 styles/                   # CSS styles (App.css, index.css)
+👆🏻 reportWebVitals.js        # Performance reporting
+👆🏻 setupTests.js             # Jest setup for testing
+👆🏻 assets/                   # Static assets (logo.svg)
+```
 
-### `npm start`
+## 🚀 Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js and npm installed
+- API keys for:
+  - [CryptoRank API](https://cryptorank.io/) – **[Get API Key](https://cryptorank.io/api-documentation)**
+  - [Yahoo Finance API](https://rapidapi.com/apidojo/api/yahoo-finance1/) – **[Get API Key](https://rapidapi.com/apidojo/api/yahoo-finance1/)**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/ritvikraj123/crypto-stock-price-tracker.git
+   cd crypto-stock-price-tracker
+   ```
 
-### `npm test`
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Set Up API Keys**
+   - Sign up and get your API keys:
+     - **CryptoRank API**: [Sign up here](https://cryptorank.io/api-documentation) and generate an API key.
+     - **Yahoo Finance API**: [Sign up here](https://rapidapi.com/apidojo/api/yahoo-finance1/) and subscribe to the API.
 
-### `npm run build`
+   - Create a `.env` file in the root directory and add:
+   ```
+   REACT_APP_CRYPTO_RANK_API_KEY=your_crypto_rank_api_key
+   REACT_APP_RAPID_API_KEY=your_yahoo_finance_api_key
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📈 Project Highlights
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📡 API Integration
+- Fetches cryptocurrency data dynamically based on user selection.
+- Uses **Axios** for API calls.
+- Handles errors gracefully.
 
-### `npm run eject`
+### ⚛️ React Components for Modular Code
+- Improves **code maintainability** and **reusability**.
+- Implements a clean **separation of concerns**.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 📊 Data Structures: Maps & Arrays
+- **Organized** and **scalable** data management.
+- **Optimized retrieval** for improved user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🚫 Error Handling
+- Displays user-friendly messages when API calls fail.
+- Prevents app crashes with structured error handling.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠 Technologies Used
+- **React (TypeScript)**
+- **React Router**
+- **Axios** (for API calls)
+- **React Select** (for dropdown selection)
+- **CSS** for styling
+- **Jest & React Testing Library** for testing
+- **Web Vitals** for performance monitoring
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛠 Running Tests
+To run the tests, use:
+```sh
+npm test
+```
 
-## Learn More
+## 👤 Developed By
+### **Ritvik Raj**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
